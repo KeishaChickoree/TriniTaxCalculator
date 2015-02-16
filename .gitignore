@@ -4,3 +4,4 @@ dist
 .sass-cache
 bower_components
 robot_test_results
+npm-debug.log
