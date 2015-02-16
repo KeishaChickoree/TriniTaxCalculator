@@ -1,25 +1,33 @@
 'use strict';
 
-angular.module('KeishaChickoree.TriniTaxCalculator', ['ngAnimate', 'ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'ngTouch'])
-
-  .constant('version', 'v0.1.0')
-
-  .config(function($locationProvider, $routeProvider) {
-
-    $locationProvider.html5Mode(false);
-
+/**
+ * @ngdoc overview
+ * @name publicApp
+ * @description
+ * # publicApp
+ *
+ * Main module of the application.
+ */
+angular
+  .module('publicApp', [
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch'
+  ])
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/home.html'
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
       })
-      .when('/features', {
-        templateUrl: 'views/features.html'
-      })
-      .when('/contact', {
-        templateUrl: 'views/contact.html'
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
-
   });
