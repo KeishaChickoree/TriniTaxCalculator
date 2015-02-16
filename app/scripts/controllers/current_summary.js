@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name triniTaxCalculatorApp.controller:MainCtrl
+ * @name triniTaxCalculatorApp.controller:AboutCtrl
  * @description
- * # MainCtrl
+ * # SummaryCtrl
  * Controller of the triniTaxCalculatorApp
  */
 angular.module('triniTaxCalculatorApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('SummaryCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
